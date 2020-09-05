@@ -33,5 +33,6 @@ jobs:
 
       - name: Publish
         run: |
+          npm config set @brickjs:registry https://registry.npmjs.org
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
           npm publish --access public
