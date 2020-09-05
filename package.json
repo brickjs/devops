@@ -1,0 +1,29 @@
+{
+  "name": "@brickjs/devops",
+  "version": "1.0.0",
+  "description": "Collection of devops scripts.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brickjs/devops.git"
+  },
+  "keywords": [
+    "brickjs",
+    "devops"
+  ],
+  "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
+  "bin": {
+    "brickjs-devops-scripts": "bin/brickjs-devops-scripts.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cross-spawn": "7.0.3",
+    "jest": "26.4.2",
+    "jest-junit": "11.1.0",
+    "ts-jest": "26.3.0",
+    "tsc-watch": "4.2.9",
+    "typescript": "4.0.2",
+    "prettier": "2.1.1",
+    "shelljs": "0.8.4",
+    "syncpack": "5.6.7"
+  }
+}
