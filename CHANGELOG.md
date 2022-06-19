@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/brickjs/devops/compare/v1.1.0...v1.2.0) (2022-06-19)
+
+
+### Features
+
+* Use js to store the prettier and eslint configs. Allow sharing to other projects. ([40e083a](https://github.com/brickjs/devops/commit/40e083ab40c40cce123962f3c1d35c53f782354a))
+
 ## 1.1.0 (2020-09-09)
 
 
