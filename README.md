@@ -7,7 +7,7 @@ With `@brickjs/devops`, each project does not need to install individual depende
 
 Installation
 ```
-npm install @brickjs/devops --save-dev
+npm install brickjs-devops --save-dev
 ```
 
 Sample usage in an application scripts entry:
@@ -85,3 +85,14 @@ module.exports = [
 ];
 
 ```
+
+## tsconfig.base.json
+
+Target is `esnext` to allow the latest feature of typescript.
+
+All codes will be transpiled to ES5 or ES6 by webpack, thus
+developer should not be restricted to particular version of ES.
+
+`allowJs` is false to ensure that projects are using typescript only.
+
+`skipLibCheck` is true to save time in ts checking.
