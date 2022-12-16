@@ -37,7 +37,7 @@ Sample usage in an application scripts entry:
 tsconfig.json
 ```json
 {
-  "extends": "@brickjs/devops/config/tsconfig.base.json",
+  "extends": "brickjs-devops/config/tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./lib/",
     "rootDir": "./src/"
@@ -50,7 +50,7 @@ tsconfig.json
 
 jest.config.js
 ```javascript
-const baseConfig = require('@brickjs/devops/config/jest.config.base');
+const baseConfig = require('brickjs-devops/config/jest.config.base');
 
 module.exports = {
   ...baseConfig,
