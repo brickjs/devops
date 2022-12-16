@@ -1,6 +1,6 @@
 {
   "name": "brickjs-devops",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Collection of devops scripts.",
   "repository": {
     "type": "git",
@@ -12,12 +12,15 @@
   ],
   "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
   "bin": {
-    "brickjs-devops-scripts": "bin/brickjs-devops-scripts.js"
+    "brickjs-devops-scripts": "bin/brickjs-devops-scripts.js",
+    "concurrently": "bin/concurrently.js",
+    "cross-env": "bin/cross-env.js",
+    "env-cmd": "bin/env-cmd.js",
+    "jest": "bin/jest.js",
+    "tsc": "bin/tsc.js",
+    "webpack": "bin/webpack.js"
   },
   "license": "MIT",
-  "scripts": {
-    "release": "standard-version"
-  },
   "dependencies": {
     "@types/jest": "28.1.3",
     "@types/node": "16.18.7",
@@ -27,11 +30,13 @@
     "@typescript-eslint/eslint-plugin": "5.46.0",
     "@typescript-eslint/parser": "5.46.0",
     "autoprefixer": "10.4.13",
+    "concurrently": "7.2.1",
     "cross-env": "7.0.3",
     "cross-spawn": "7.0.3",
     "css-loader": "6.7.2",
     "css-minimizer-webpack-plugin": "4.2.2",
     "dotenv": "16.0.3",
+    "env-cmd": "10.1.0",
     "eslint": "8.29.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.5.0",
@@ -66,8 +71,5 @@
     "webpack-cli": "5.0.1",
     "webpack-dev-server": "4.11.1",
     "webpack-manifest-plugin": "5.0.0"
-  },
-  "devDependencies": {
-    "standard-version": "9.5.0"
   }
 }
