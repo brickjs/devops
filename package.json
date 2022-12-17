@@ -1,6 +1,6 @@
 {
   "name": "brickjs-devops",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Collection of devops scripts.",
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
   "bin": {
     "brickjs-devops-scripts": "bin/brickjs-devops-scripts.js",
-    "concurrently": "bin/concurrently.js",
+    "concurrently": "./node_modules/concurrently/dist/bin/concurrently.js",
     "cross-env": "bin/cross-env.js",
     "env-cmd": "bin/env-cmd.js",
     "jest": "bin/jest.js",

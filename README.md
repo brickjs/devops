@@ -3,6 +3,10 @@
 A collection of opinionated common tools, scripts and configurations to build, test and deploy applications. 
 With `@brickjs/devops`, each project does not need to install individual dependencies thus it greatly shortens the `devDependencies` entries.  
 
+### mts and mjs
+
+Starting from version 2, this package will only support .mts and .mjs extensions.
+
 ### Quick Start
 
 Installation
@@ -10,34 +14,25 @@ Installation
 npm install brickjs-devops --save-dev
 ```
 
-Sample usage in an application scripts entry:
-```json
-{
-    "scripts": {
-      "build": "brickjs-devops-scripts build",
-      "build:watch": "brickjs-devops-scripts tsc --watch",
-      "test": "brickjs-devops-scripts test"
-    }
-}
-```
+For monorepo setup, the package will re-export the following scripts:
 
-### Available Script
+| Script             | Description                                |
+|--------------------|--------------------------------------------|
+| concurrently       | https://www.npmjs.com/package/concurrently |
+| cross-env          | https://www.npmjs.com/package/cross-env    |
+| env-cmd            | https://www.npmjs.com/package/env-cmd      |
+| jest               | https://www.npmjs.com/package/jest         |
+| tsc                | https://www.npmjs.com/package/typescript   |
+| webpack            | https://www.npmjs.com/package/webpack      |
 
-| Script | Description |
-|------|------------|
-| build | Run tsc |
-| test | Run jest |
-| tsc | Typescript |
-| jest | Jest |
-| webpack | Webpack |
-| webpack-dev-server | Webpack Dev Server |
+This will allow the packages to access the script directly.
 
 ### Common Config
 
 tsconfig.json
 ```json
 {
-  "extends": "brickjs-devops/config/tsconfig.base.json",
+  "extends": "brickjs-devops/tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./lib/",
     "rootDir": "./src/"
@@ -48,13 +43,14 @@ tsconfig.json
 }
 ```
 
-jest.config.js
+jest.config.mjs
 ```javascript
-const baseConfig = require('brickjs-devops/config/jest.config.base');
+import baseConfig from 'brickjs-devops/jest.config.base.mjs';
 
-module.exports = {
+const config = {
   ...baseConfig,
 };
+export default config;
 ```
 
 webpack.config.js
